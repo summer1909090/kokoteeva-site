@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Оплата не прошла — Кокотеева Community</title>
+<meta name="description" content="Оплата подписки на клуб «Кокотеева Community» не прошла. Спокойно: деньги не списаны, попробуйте ещё раз.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../logo_sk.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Golos+Text:wght@400;500;600;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bordo:#7A1F2B; --bordo-dark:#591114; --red:#D32A1E; --navy:#243A5E; --green:#2C4A3B;
+  --cream:#ECE7DC; --paper:#F5F1EA; --white:#FFFFFF; --ink:#111111;
+  --line:rgba(17,17,17,.12);
+  --sh2:0 4px 14px rgba(17,17,17,.10),0 22px 48px rgba(122,31,43,.16);
+  --r:16px;
+  --disp:'Oswald',sans-serif; --text:'Golos Text',sans-serif; --hand:'Caveat',cursive;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--text);color:var(--ink);background:var(--cream);font-size:16px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(rgba(17,17,17,.05) 1px,transparent 1px);background-size:24px 24px}
+.page{max-width:480px;margin:0 auto;position:relative;overflow-x:clip;background:var(--cream);
+  box-shadow:0 0 60px rgba(17,17,17,.10);min-height:100dvh;padding:0 0 56px}
+
+/* header */
+.top{display:flex;align-items:center;gap:12px;padding:22px 24px 0}
+.top img{width:44px;height:auto}
+.top .who{font-size:12.5px;line-height:1.3}
+.top .who b{display:block;font-weight:800;letter-spacing:.02em}
+.top .who span{opacity:.65}
+
+/* hero */
+.hero{padding:34px 24px 0;position:relative}
+.eyebrow{font-family:var(--disp);text-transform:uppercase;font-size:12px;font-weight:600;letter-spacing:.34em;opacity:.6}
+h1{font-family:var(--disp);text-transform:uppercase;line-height:.96;font-weight:700;
+  font-size:clamp(38px,11vw,54px);margin-top:12px}
+h1 .accent{color:var(--red)}
+.bars{margin-top:14px}
+.bars i{display:block;background:var(--red);height:11px;width:64%}
+.bars i+i{height:5px;width:36%;margin-top:5px;background:var(--bordo)}
+.sub{margin-top:16px;font-size:15.5px;opacity:.85;max-width:42ch}
+.sub b{font-weight:800}
+
+/* stamp */
+.stampwrap{position:absolute;top:-4px;right:18px;z-index:3;pointer-events:none}
+.stamp{font-family:var(--disp);text-transform:uppercase;font-weight:700;font-size:15px;letter-spacing:.14em;
+  color:var(--ink);border:3px solid var(--ink);border-radius:8px;padding:7px 13px;background:rgba(245,241,234,.65);
+  transform:rotate(-8deg);opacity:0}
+.stamp svg{vertical-align:-3px;margin-right:6px}
+.anim .stamp{animation:stamp .55s cubic-bezier(.2,1.4,.4,1) .5s forwards}
+@keyframes stamp{
+  0%{opacity:0;transform:rotate(-20deg) scale(2.1)}
+  70%{opacity:1;transform:rotate(-7deg) scale(.94)}
+  100%{opacity:1;transform:rotate(-8deg) scale(1)}
+}
+
+/* cross seal */
+.seal{width:96px;height:96px;margin:30px 0 0;position:relative}
+.seal svg{width:100%;height:100%;overflow:visible}
+.seal .ring{fill:none;stroke:var(--red);stroke-width:5;stroke-dasharray:8 7;stroke-linecap:round}
+.seal .x1,.seal .x2{fill:none;stroke:var(--red);stroke-width:7;stroke-linecap:round;
+  stroke-dasharray:44;stroke-dashoffset:44}
+.anim .seal{animation:none}
+.anim .seal svg{animation:spin-in .8s cubic-bezier(.2,.8,.2,1) .1s both}
+@keyframes spin-in{from{opacity:0;transform:rotate(-70deg) scale(.7)}to{opacity:1;transform:none}}
+.anim .seal .x1{animation:draw .3s cubic-bezier(.5,0,.3,1) .85s forwards}
+.anim .seal .x2{animation:draw .3s cubic-bezier(.5,0,.3,1) 1.05s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* handwritten */
+.hand{font-family:var(--hand);font-weight:700;color:var(--bordo);font-size:24px;line-height:1.1;
+  transform:rotate(-2deg);display:inline-block;margin-top:20px}
+
+/* reasons */
+section{padding:44px 24px 0}
+h2{font-family:var(--disp);text-transform:uppercase;font-weight:700;line-height:.98;font-size:clamp(24px,7vw,32px)}
+h2 u{text-decoration:none;box-shadow:inset 0 -12px 0 rgba(211,42,30,.16)}
+.hint{margin-top:8px;font-size:14px;opacity:.7}
+.list{margin-top:20px;display:grid;gap:10px}
+.item{display:flex;gap:12px;align-items:flex-start;background:var(--white);border-radius:var(--r);
+  padding:14px 16px;box-shadow:0 2px 10px rgba(17,17,17,.06);font-size:14px;line-height:1.45}
+.item .ic{flex:none;width:38px;height:38px;border-radius:10px;background:rgba(122,31,43,.09);
+  display:grid;place-items:center;color:var(--bordo)}
+.item b{font-weight:800}
+
+/* buttons */
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;margin-top:26px;
+  background:var(--red);color:#fff;border-radius:14px;font-weight:800;font-size:16.5px;
+  text-decoration:none;padding:14px 20px;box-shadow:0 6px 18px rgba(211,42,30,.35),0 18px 40px -10px rgba(211,42,30,.28);
+  transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(211,42,30,.4),0 26px 52px -10px rgba(211,42,30,.32)}
+.btn:active{transform:translateY(0) scale(.985)}
+.btn .rot{display:inline-flex;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.btn:hover .rot{transform:rotate(180deg)}
+.btn2{display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;margin-top:12px;
+  background:transparent;color:var(--ink);border:1.5px solid rgba(17,17,17,.35);border-radius:14px;
+  font-weight:600;font-size:15px;text-decoration:none;padding:12px 20px;transition:border-color .2s,transform .2s}
+.btn2:hover{border-color:var(--ink);transform:translateY(-1px)}
+.btnnote{font-family:var(--hand);font-weight:700;color:var(--bordo);font-size:20px;text-align:center;margin-top:10px;transform:rotate(-1.4deg)}
+
+/* help strip */
+.help{margin:40px 24px 0;background:var(--navy);color:var(--cream);border-radius:var(--r);padding:20px;
+  display:flex;gap:14px;align-items:center;text-decoration:none;box-shadow:var(--sh2);transition:transform .2s}
+.help:hover{transform:translateY(-2px)}
+.help .ic{flex:none;width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(236,231,220,.45);display:grid;place-items:center}
+.help .tx{font-size:13.5px;line-height:1.4;opacity:.95}
+.help .tx b{display:block;font-size:14.5px;font-weight:800}
+.help .go{margin-left:auto;flex:none;font-family:var(--disp);text-transform:uppercase;font-size:12px;letter-spacing:.14em;opacity:.85}
+
+/* video polaroid */
+.snap{margin:44px auto 0;width:min(78%,300px);background:var(--white);padding:10px 10px 44px;border-radius:6px;
+  transform:rotate(2.2deg);box-shadow:var(--sh2);position:relative;transition:transform .3s}
+.snap:hover{transform:rotate(.6deg) scale(1.02)}
+.snap video{border-radius:3px;width:100%;aspect-ratio:5/4;object-fit:cover;display:block;background:#000}
+.snap .cap{font-family:var(--hand);font-weight:700;font-size:21px;color:var(--bordo);text-align:center;
+  position:absolute;left:0;right:0;bottom:8px}
+.snap .pin{position:absolute;top:-10px;left:50%;width:64px;height:20px;transform:translateX(-50%) rotate(2deg);
+  background:rgba(122,31,43,.22);border-radius:2px}
+.wait{padding:0 24px;text-align:center}
+.wait .hand{font-size:26px;margin-top:26px;transform:rotate(-1.6deg)}
+
+/* footer */
+footer{margin-top:52px;padding:26px 24px 0;border-top:1px solid var(--line);text-align:center}
+footer img{width:52px;opacity:.9}
+footer .nm{font-family:var(--disp);text-transform:uppercase;font-weight:600;font-size:13px;letter-spacing:.22em;margin-top:10px}
+footer .ds{font-size:12px;opacity:.6;letter-spacing:.08em;margin-top:2px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv-d1{transition-delay:.08s}.rv-d2{transition-delay:.16s}.rv-d3{transition-delay:.24s}
+
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .anim .stamp{animation:none;opacity:1}
+  .anim .seal svg{animation:none}
+  .anim .seal .x1,.anim .seal .x2{animation:none;stroke-dashoffset:0}
+  .snap,.btn,.btn2,.help,.btn .rot{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="page anim">
+
+  <header class="top rv">
+    <img src="../logo_sk.svg" alt="Монограмма SK">
+    <div class="who"><b>Светлана Кокотеева</b><span>карьерный стратег</span></div>
+  </header>
+
+  <div class="hero">
+    <div class="stampwrap"><span class="stamp">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>не прошло</span>
+    </div>
+
+    <span class="eyebrow rv">Кокотеева Community</span>
+    <h1 class="rv rv-d1">Оплата<br><span class="accent">не прошла</span></h1>
+    <div class="bars rv rv-d1"><i></i><i></i></div>
+
+    <div class="seal rv rv-d2" role="img" aria-label="Платёж отклонён">
+      <svg viewBox="0 0 100 100">
+        <circle class="ring" cx="50" cy="50" r="46"/>
+        <path class="x1" d="M35 35l30 30" pathLength="44"/>
+        <path class="x2" d="M65 35l-30 30" pathLength="44"/>
+      </svg>
+    </div>
+
+    <p class="sub rv rv-d2">Банк не пропустил платёж — так бывает, и чаще всего это решается со второй попытки. <b>Деньги не списаны.</b> Если банк всё же показал списание, сумма вернётся автоматически в течение нескольких дней.</p>
+
+    <span class="hand rv rv-d3">спокойно — всё решаемо</span>
+  </div>
+
+  <section>
+    <h2 class="rv">Почему так <u>бывает</u></h2>
+    <p class="hint rv">Четыре причины, которые закрывают девять случаев из десяти:</p>
+    <div class="list">
+      <div class="item rv">
+        <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span>
+        <div><b>Лимит на онлайн-платежи.</b> Проверьте лимиты в приложении банка — часто подписки режутся именно там.</div>
+      </div>
+      <div class="item rv rv-d1">
+        <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+        <div><b>Не дождались СМС-кода.</b> Подтверждение действует пару минут — при повторе просто введите код сразу.</div>
+      </div>
+      <div class="item rv rv-d2">
+        <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+        <div><b>Не хватило средств.</b> С учётом комиссии банка сумма может быть чуть больше, чем 1 990 ₽.</div>
+      </div>
+      <div class="item rv rv-d3">
+        <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg></span>
+        <div><b>Банк отклонил без объяснений.</b> Такое случается с любой картой. Помогает повтор через минуту или другая карта.</div>
+      </div>
+    </div>
+
+    <a class="btn rv" href="https://t.me/hrsvetlanakokoteeva_bot" target="_blank" rel="noopener">
+      <span class="rot"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg></span>
+      Попробовать ещё раз
+    </a>
+    <div class="btnnote rv">та же ссылка, вторая попытка</div>
+    <a class="btn2 rv" href="https://t.me/hrsvetlanakokoteeva_bot" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+      Оплатить другой картой
+    </a>
+  </section>
+
+  <a class="help rv" href="https://t.me/Svetlana_Kokoteeva" target="_blank" rel="noopener">
+    <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg></span>
+    <span class="tx"><b>Ничего не помогло?</b>Напишите Светлане — пришлём другой способ оплаты.</span>
+    <span class="go">написать →</span>
+  </a>
+
+  <figure class="snap rv">
+    <span class="pin"></span>
+    <video autoplay muted loop playsinline preload="metadata" src="../svetlana_video_fail.mp4" aria-label="Светлана Кокотеева"></video>
+    <figcaption class="cap">сила характера — моя тема</figcaption>
+  </figure>
+  <div class="wait rv"><span class="hand">клуб вас дождётся. а карьера — не ждёт</span></div>
+
+  <footer>
+    <img src="../logo_sk.svg" alt="">
+    <div class="nm">Светлана Кокотеева</div>
+    <div class="ds">Кокотеева Community · клуб по подписке</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.rv');
+  if(reduce || !('IntersectionObserver' in window)){
+    els.forEach(function(e){e.classList.add('in')});
+  }else{
+    var io = new IntersectionObserver(function(en){
+      en.forEach(function(x){ if(x.isIntersecting){ x.target.classList.add('in'); io.unobserve(x.target);} });
+    },{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  }
+
+  // страховка: если observer не сработал, показать всё через 2.5с
+  setTimeout(function(){ els.forEach(function(e){e.classList.add('in')}); }, 2500);
+})();
+</script>
+</body>
+</html>
